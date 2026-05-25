@@ -1,3 +1,4 @@
+using ProjectManagement.API.Middleware;
 using ProjectManagement.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,9 +16,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseMiddleware<GlobalExceptionHandlingMiddleware>();
+
 app.UseHttpsRedirection();
 
-// ORDER MATTERS — Authentication before Authorization
 app.UseAuthentication();
 app.UseAuthorization();
 
