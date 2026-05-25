@@ -14,6 +14,6 @@ namespace ProjectManagement.Domain.Entities
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public Guid UserId { get; set; }
         public User User { get; set; }
-        public ICollection<Task> Tasks { get; set; }
+        public ICollection<TaskItem> Tasks { get; set; }
     }
 }
