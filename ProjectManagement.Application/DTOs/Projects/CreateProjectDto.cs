@@ -1,6 +1,7 @@
-﻿using System;
+﻿namespace ProjectManagement.Application.DTOs.Projects;
 
-public class CreatProjectDto
+public class CreateProjectDto
 {
-	
+    public string Name { get; set; } = string.Empty;
+    public string Description { get; set; } = string.Empty;
 }
