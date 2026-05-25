@@ -32,6 +32,7 @@ public static class DependencyInjection
         //Service registration
         services.AddScoped<IAuthService, AuthService>();
         services.AddScoped<IProjectService, ProjectService>();
+        services.AddScoped<ITaskService, TaskService>();
 
         // Authentication
         var jwtSettings = configuration.GetSection("JwtSettings").Get<JwtSettings>();
