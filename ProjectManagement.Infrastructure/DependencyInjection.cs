@@ -20,7 +20,8 @@ public static class DependencyInjection
         // DbContext
         services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(
-                configuration.GetConnectionString("DefaultConnection")));
+                configuration.GetConnectionString("DefaultConnection"),
+                sqlOptions => sqlOptions.EnableRetryOnFailure()));
 
         // JWT Settings
         services.Configure<JwtSettings>(
