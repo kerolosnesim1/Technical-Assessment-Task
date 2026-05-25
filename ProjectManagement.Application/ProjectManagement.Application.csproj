@@ -10,4 +10,8 @@
     <ProjectReference Include="..\ProjectManagement.Domain\ProjectManagement.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="9.0.3" />
+  </ItemGroup>
+
 </Project>
